@@ -1,0 +1,3 @@
+This program is to test the availability and behaviour of copy_file_range,
+FICLONE, FICLONERANGE and FIDEDUPERANGE in the Linux kernel. It should compile
+and run even if these features aren't exposed through the libc.
