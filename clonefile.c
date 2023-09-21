@@ -151,15 +151,13 @@ int do_clonerange(int sfd, int dfd, loff_t soff, loff_t doff, size_t len);
 int do_copyfilerange(int sfd, int dfd, loff_t soff, loff_t doff, size_t len);
 int do_deduperange(int sfd, int dfd, loff_t soff, loff_t doff, size_t len);
 
-int quiet = 0;
-
 int
 main(int argc, char **argv)
 {
 	cf_mode_t mode = CF_MODE_NONE;
 
 	char c;
-	while ((c = getopt(argc, argv, "crfdq")) != -1) {
+	while ((c = getopt(argc, argv, "crfd")) != -1) {
 		switch (c) {
 			case 'c':
 				mode = CF_MODE_CLONE;
@@ -172,9 +170,6 @@ main(int argc, char **argv)
 				break;
 			case 'd':
 				mode = CF_MODE_DEDUPERANGE;
-				break;
-			case 'q':
-				quiet = 1;
 				break;
 		}
 	}
