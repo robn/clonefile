@@ -162,7 +162,7 @@ main(int argc, char **argv)
 	cf_mode_t mode = CF_MODE_NONE;
 	int dstflags = 0;
 
-	char c;
+	int c;
 	while ((c = getopt(argc, argv, "crfdt")) != -1) {
 		switch (c) {
 			case 'c':
